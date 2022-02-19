@@ -1,0 +1,46 @@
+<section class="contact" id="contact">
+  <div class="contact__box">
+    <h2 class="visually-hidden">Contact</h2>
+    <img src="./images/home/contact.jpg" alt=" " class="contact__image" />
+    <div class="contact__form">
+      <form
+        autocomplete="off"
+        name="contact"
+        class="formWithValidation"
+        method="POST"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="contact__text">Request Callback</p>
+        <div class="input__box">
+          <input
+            class="contact__input-field"
+            type="text"
+            data-username
+            name="username"
+            placeholder=" "
+          />
+          <label class="contact__input-field-name">Enter your name</label>
+        </div>
+        <div class="input__box">
+          <input
+            class="contact__input-field js-contact__input-field"
+            type="email"
+            data-email
+            name="email"
+            placeholder=" "
+          />
+          <label class="contact__input-field-name">Enter email*</label>
+          <span class="contact__input-warning">
+            <svg class="warning__icon">
+              <use href="./images/form/symbol-defs.svg#warning"></use>
+            </svg>
+            <span class="contact__input-warning-text"> This is a required field</span>
+          </span>
+        </div>
+
+        <input type="submit" class="contact__send-button" value="Send" />
+      </form>
+    </div>
+  </div>
+</section>

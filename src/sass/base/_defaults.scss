@@ -1,0 +1,51 @@
+/* Применение наследуемых стилей */
+// html {
+//   scroll-behavior: smooth;
+// }
+
+body {
+  font-family: $main-font-family;
+  color: $main-text-color;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  min-width: 320px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Убираются внешние и внутриние отступы для секции */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Убираются внешние и внутриние отступы для заголовков */
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+/* Убирается подчеркивание ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Убираются точки для маркированного списка */
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

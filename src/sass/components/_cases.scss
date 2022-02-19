@@ -1,0 +1,120 @@
+#cases {
+  margin-top: -170px;
+  padding-top: 170px;
+}
+
+.bussines-cases__image-link {
+  display: block;
+}
+
+.bussines-cases__image-link:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.bussines-cases__image-box {
+  margin-bottom: 46px;
+}
+
+.bussines-cases {
+  margin: 0;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.bussines-cases__text-caption {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.bussines-cases__caption {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #333333;
+  margin-bottom: 35px;
+}
+
+.bussines-cases__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+
+  color: #333333;
+  margin-bottom: 37px;
+}
+
+@media screen and (min-width: 768px) {
+  #cases {
+    margin-top: -118px;
+    padding-top: 118px;
+  }
+
+  .bussines-cases {
+    padding: 0 28px;
+    margin: 0;
+    margin-bottom: 48px;
+
+    &__text-caption {
+      font-size: 20px;
+      line-height: 33px;
+      margin-bottom: 15px;
+    }
+
+    &__caption {
+      font-size: 38px;
+      line-height: 48px;
+      margin-bottom: 35px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 38px;
+    }
+
+    &__image-box {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 7px 8px;
+      justify-content: space-between;
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: space-between;
+      // flex-basis: calc((100% - 4 * 30px) / 4);
+
+      // @media screen and (min-width: 1200px) {
+      //   flex-basis: calc((100% - 6 * 30px) / 6);
+      // }
+      margin-bottom: 0;
+    }
+
+    &__image {
+      // width: 172px;
+      // height: 115px;
+      margin-bottom: 0;
+    }
+
+    &__image-link:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .bussines-cases__image {
+    // width: 320px;
+    // height: 214px;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,109 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // &__header-box--fixed {
+  //   padding-top: 144px;
+  // }
+
+  &__caption {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 66px;
+    text-align: center;
+    color: #e9e9e9;
+
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 37px;
+    text-align: center;
+    color: #e9e9e9;
+
+    margin-bottom: 27px;
+  }
+
+  &__icon {
+    width: 9px;
+    height: 18px;
+    fill: #fff;
+    margin-right: 6px;
+  }
+
+  &__button {
+    width: 156px;
+    height: 45px;
+    background: #28a745;
+    border-radius: 5px;
+    outline: none;
+    border: transparent;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: $color-white;
+
+    // padding: 12px 26px;
+    margin-bottom: 95px;
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background: #28a746d5;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 254px;
+    transition: 0.3s;
+
+    &__box--onscroll {
+      padding-top: 407px;
+    }
+
+    &__caption {
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__button {
+      margin-bottom: 412px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    &__caption {
+      font-size: 55px;
+      line-height: 66px;
+      margin-bottom: 25px;
+    }
+
+    &__box--onscroll {
+      padding-top: 279px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__button {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 284px;
+    }
+  }
+}

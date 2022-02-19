@@ -1,0 +1,160 @@
+#blog {
+  margin-top: -120px;
+  padding-top: 120px;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.blog__box {
+  background: #0284d0;
+  padding: 30px;
+}
+
+.blog__text-date {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.blog__caption {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.blog__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.blog__icon {
+  width: 9px;
+  height: 18px;
+  fill: #fff;
+  margin-right: 6px;
+}
+
+.blog__button {
+  width: 184px;
+  height: 47px;
+  outline: none;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+.blog__button:hover,
+.blog__button:focus {
+  background-color: #fff;
+
+  color: #0284d0;
+}
+
+@media screen and (min-width: 768px) {
+  #blog {
+    margin-top: -70px;
+    padding-top: 70px;
+  }
+
+  .blog {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 48px;
+
+    &__box {
+      background: #0284d0;
+      padding: 29px 30px 30px 30px;
+    }
+
+    &__text-date {
+      font-size: 20px;
+      line-height: 33px;
+      margin-bottom: 6px;
+    }
+
+    &__caption {
+      font-size: 38px;
+      line-height: 48px;
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    &__button {
+      width: 196px;
+      height: 50px;
+
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &__image {
+      object-fit: cover;
+      max-width: 384px;
+      max-height: 468px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .blog {
+    &__box {
+      background: #0284d0;
+      padding: 112px 30px 113px 30px;
+    }
+
+    &__text-date {
+      font-size: 20px;
+      line-height: 33px;
+      margin-bottom: 5px;
+    }
+
+    &__caption {
+      font-size: 38px;
+      line-height: 48px;
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 17px;
+    }
+
+    &__button {
+      width: 196px;
+      height: 50px;
+
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &__image {
+      max-width: 680px;
+      max-height: 517px;
+    }
+  }
+}
