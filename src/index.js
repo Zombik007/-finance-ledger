@@ -16,7 +16,6 @@ function changeHeaderBackground() {
 }
 
 let form = document.querySelector('.formWithValidation');
-let validateBtn = form.querySelector('.contact__send-button');
 let inputFieldEmail = document.querySelector('.js-contact__input-field');
 let inputWarning = document.querySelector('.contact__input-warning');
 
@@ -26,14 +25,13 @@ function hadlerSubmit(e) {
   e.preventDefault();
   if (inputFieldEmail.value.length === 0) {
     inputWarning.style.opacity = 1;
-    console.log('input empty');
 
     setTimeout(() => {
       inputWarning.style.opacity = 0;
     }, 5000);
     return;
   }
-  let form = document.querySelector('.formWithValidation');
+
   let formData = new FormData(form);
   fetch('/', {
     method: 'POST',
