@@ -30,9 +30,6 @@ form.addEventListener('submit', function (e) {
     }, 5000);
     // return false;
   }
-  console.log('====================================');
-  console.log('press send');
-  console.log('====================================');
 });
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
