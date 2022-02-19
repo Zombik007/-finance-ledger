@@ -15,11 +15,39 @@ function changeHeaderBackground() {
   }
 }
 
-// let form = document.querySelector('.formWithValidation');
-// // let validateBtn = form.querySelector('.contact__send-button');
-// let inputFieldEmail = document.querySelector('.js-contact__input-field');
-// let inputWarning = document.querySelector('.contact__input-warning');
-// form.addEventListener('submit', hundlerSubmit(e));
+let form = document.querySelector('.formWithValidation');
+let validateBtn = form.querySelector('.contact__send-button');
+let inputFieldEmail = document.querySelector('.js-contact__input-field');
+let inputWarning = document.querySelector('.contact__input-warning');
+
+form.addEventListener('submit', hadlerSubmit);
+
+function hadlerSubmit(e) {
+  e.preventDefault();
+  if (inputFieldEmail.value.length === 0) {
+    inputWarning.style.opacity = 1;
+    console.log('input empty');
+
+    setTimeout(() => {
+      inputWarning.style.opacity = 0;
+    }, 5000);
+    return;
+  }
+  let form = document.querySelector('.formWithValidation');
+  let formData = new FormData(form);
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log('Form successfully submitted'))
+    .catch(error => alert(error));
+  // removeListener();
+}
+
+// function removeListener() {
+//   form.removeEventListener('submit', hadlerSubmit);
+// }
 
 // const hundlerSubmit = e => {
 //   e.preventDefault();
@@ -30,9 +58,8 @@ function changeHeaderBackground() {
 //     setTimeout(() => {
 //       inputWarning.style.opacity = 0;
 //     }, 5000);
-//     return false;
+//     // return false;
 //   }
-//   form.removeEventListener('submit', hundlerSubmit(e));
 // };
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
