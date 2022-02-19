@@ -42,25 +42,7 @@ function hadlerSubmit(e) {
   })
     .then(() => console.log('Form successfully submitted'))
     .catch(error => alert(error));
-  removeListener();
 }
-
-function removeListener() {
-  form.removeEventListener('submit', hadlerSubmit);
-}
-
-// const hundlerSubmit = e => {
-//   e.preventDefault();
-//   if (inputFieldEmail.value.length === 0) {
-//     inputWarning.style.opacity = 1;
-//     console.log('input empty');
-
-//     setTimeout(() => {
-//       inputWarning.style.opacity = 0;
-//     }, 5000);
-//     // return false;
-//   }
-// };
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
   link.addEventListener('click', function (e) {
@@ -78,10 +60,6 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
     }
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
-
-    console.log('elementPosition: ', elementPosition);
-    console.log('offsetPosition: ', offsetPosition);
-    console.log('topOffset: ', topOffset);
 
     window.scrollBy({
       top: offsetPosition,
