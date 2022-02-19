@@ -22,8 +22,8 @@ const inputWarning = document.querySelector('.contact__input-warning');
 form.addEventListener('submit', hadlerSubmit);
 
 function hadlerSubmit(e) {
-  e.preventDefault();
   // if (inputFieldEmail.value.length === 0) {
+  //   e.preventDefault();
   //   inputWarning.style.opacity = 1;
 
   //   setTimeout(() => {
@@ -32,12 +32,30 @@ function hadlerSubmit(e) {
   //   console.log('input enpty');
   //   return;
   // }
-  // if (inputFieldEmail.value.length === 0) {
-  //   validate();
-  //   return;
-  // }
+  if (inputFieldEmail.value.length === 0) {
+    e.preventDefault();
+    validate();
+    return;
+  }
   sendForm();
 }
+
+// const handleSubmit = e => {
+//   // e.preventDefault();
+//   let myForm = document.getElementById('formSend');
+//   let formData = new FormData(myForm);
+//   fetch('/', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//     body: new URLSearchParams(formData).toString(),
+//   })
+//     .then(() => console.log('Form successfully submitted'))
+//     .catch(error => alert(error));
+//   console.log(formData);
+//   console.log(myForm);
+// };
+
+// document.querySelector('form').addEventListener('submit', handleSubmit);
 
 function validate() {
   // if (inputFieldEmail.value.length === 0) {
@@ -51,9 +69,9 @@ function validate() {
   // }
 }
 
-function sendForm() {
-  // let formSend = document.querySelector('form');
-  let formData = new FormData(form);
+function sendForm(e) {
+  let myForm = document.getElementById('formSend');
+  let formData = new FormData(myForm);
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
