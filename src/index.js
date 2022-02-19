@@ -32,10 +32,10 @@ function hadlerSubmit(e) {
   //   console.log('input enpty');
   //   return;
   // }
-  if (inputFieldEmail.value.length === 0) {
-    validate();
-    // return;
-  }
+  // if (inputFieldEmail.value.length === 0) {
+  //   validate();
+  //   return;
+  // }
   sendForm();
 }
 
@@ -52,8 +52,8 @@ function validate() {
 }
 
 function sendForm() {
-  let formSend = document.querySelector('form');
-  let formData = new FormData(formSend);
+  // let formSend = document.querySelector('form');
+  let formData = new FormData(form);
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
