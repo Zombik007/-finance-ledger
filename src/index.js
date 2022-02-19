@@ -15,7 +15,7 @@ function changeHeaderBackground() {
   }
 }
 
-const form = document.querySelector('.form');
+const form = document.querySelector('form');
 const inputFieldEmail = document.querySelector('.js-contact__input-field');
 const inputWarning = document.querySelector('.contact__input-warning');
 
@@ -23,16 +23,32 @@ form.addEventListener('submit', hadlerSubmit);
 
 function hadlerSubmit(e) {
   e.preventDefault();
-  if (inputFieldEmail.value.length === 0) {
-    inputWarning.style.opacity = 1;
+  // if (inputFieldEmail.value.length === 0) {
+  //   inputWarning.style.opacity = 1;
 
-    setTimeout(() => {
-      inputWarning.style.opacity = 0;
-    }, 5000);
-    console.log('input enpty');
+  //   setTimeout(() => {
+  //     inputWarning.style.opacity = 0;
+  //   }, 5000);
+  //   console.log('input enpty');
+  //   return;
+  // }
+  if (inputFieldEmail.value.length === 0) {
+    validate();
     return;
   }
   sendForm();
+}
+
+function validate() {
+  // if (inputFieldEmail.value.length === 0) {
+  inputWarning.style.opacity = 1;
+
+  setTimeout(() => {
+    inputWarning.style.opacity = 0;
+  }, 5000);
+  console.log('input enpty');
+
+  // }
 }
 
 function sendForm() {
