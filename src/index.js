@@ -34,8 +34,8 @@ function hadlerSubmit(e) {
   }
   sendForm();
 }
+
 function sendForm() {
-  let form = document.querySelector('.formWithValidation');
   let formData = new FormData(form);
   fetch('/', {
     method: 'POST',
