@@ -12,7 +12,7 @@
 
 .footer__social-icon {
   font-size: 35px;
-  color: #ffffff;
+  color: $color-white;
   margin-bottom: 9px;
 }
 
@@ -22,22 +22,20 @@
 
 .footer__social-icon:hover,
 .footer__social-icon:focus {
-  color: #28a745;
+  color: $accent-color;
 }
 
 .footer__text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+  font-size: $text-font-size-small;
   line-height: 26px;
   text-align: center;
 
-  color: #ffffff;
+  color: $color-white;
 }
 
-@media screen and (min-widht: 768px) {
+@media screen and (min-widht: $width-tablet) {
   .footer__text {
-    font-size: 18px;
+    font-size: $text-font-size-medium;
     line-height: 28px;
   }
 }

@@ -9,10 +9,9 @@
   // }
 
   &__caption {
-    font-style: normal;
-    font-weight: 300;
     font-size: 52px;
     line-height: 66px;
+    font-weight: 300;
     text-align: center;
     color: #e9e9e9;
 
@@ -20,8 +19,6 @@
   }
 
   &__text {
-    font-style: normal;
-    font-weight: normal;
     font-size: 22px;
     line-height: 37px;
     text-align: center;
@@ -40,13 +37,12 @@
   &__button {
     width: 156px;
     height: 45px;
-    background: #28a745;
+    background: $accent-color;
     border-radius: 5px;
     outline: none;
     border: transparent;
 
-    font-weight: normal;
-    font-size: 16px;
+    font-size: $text-font-size-small;
     line-height: 26px;
     text-align: center;
     color: $color-white;
@@ -57,11 +53,11 @@
 
   &__button:hover,
   &__button:focus {
-    background: #28a746d5;
+    opacity: 0.8;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $width-tablet) {
   .hero {
     padding-top: 254px;
     transition: 0.3s;
@@ -84,11 +80,10 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: $width-desktop) {
   .hero {
     &__caption {
       font-size: 55px;
-      line-height: 66px;
       margin-bottom: 25px;
     }
 
@@ -101,7 +96,7 @@
     }
 
     &__button {
-      font-size: 18px;
+      font-size: $text-font-size-medium;
       line-height: 28px;
       margin-bottom: 284px;
     }

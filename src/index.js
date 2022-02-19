@@ -5,6 +5,11 @@ window.onscroll = function () {
 };
 
 const header = document.querySelector('.header');
+const form = document.querySelector('.formWithValidation');
+const inputFieldEmail = document.querySelector('.js-contact__input-field');
+const inputWarning = document.querySelector('.contact__input-warning');
+const links = document.querySelectorAll('a[href^="#"');
+
 let headerHeight = header.offsetHeight;
 
 function changeHeaderBackground() {
@@ -15,23 +20,9 @@ function changeHeaderBackground() {
   }
 }
 
-const form = document.querySelector('.formWithValidation');
-const inputFieldEmail = document.querySelector('.js-contact__input-field');
-const inputWarning = document.querySelector('.contact__input-warning');
-
 form.addEventListener('submit', hadlerSubmit);
 
 function hadlerSubmit(e) {
-  // if (inputFieldEmail.value.length === 0) {
-  //   e.preventDefault();
-  //   inputWarning.style.opacity = 1;
-
-  //   setTimeout(() => {
-  //     inputWarning.style.opacity = 0;
-  //   }, 5000);
-  //   console.log('input enpty');
-  //   return;
-  // }
   if (inputFieldEmail.value.length === 0) {
     e.preventDefault();
     validate();
@@ -40,33 +31,12 @@ function hadlerSubmit(e) {
   sendForm();
 }
 
-// const handleSubmit = e => {
-//   // e.preventDefault();
-//   let myForm = document.getElementById('formSend');
-//   let formData = new FormData(myForm);
-//   fetch('/', {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-//     body: new URLSearchParams(formData).toString(),
-//   })
-//     .then(() => console.log('Form successfully submitted'))
-//     .catch(error => alert(error));
-//   console.log(formData);
-//   console.log(myForm);
-// };
-
-// document.querySelector('form').addEventListener('submit', handleSubmit);
-
 function validate() {
-  // if (inputFieldEmail.value.length === 0) {
   inputWarning.style.opacity = 1;
 
   setTimeout(() => {
     inputWarning.style.opacity = 0;
   }, 5000);
-  console.log('input enpty');
-
-  // }
 }
 
 function sendForm(e) {
@@ -79,11 +49,9 @@ function sendForm(e) {
   })
     .then(() => console.log('Form successfully submitted'))
     .catch(error => alert(error));
-
-  console.log(formData);
 }
 
-document.querySelectorAll('a[href^="#"').forEach(link => {
+links.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     let header = document.querySelector('.header');

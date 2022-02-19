@@ -1,12 +1,15 @@
-$main-text-color: #757575;
-$text-caption-color: #212121;
-$color-white: #fff;
-$accent-color: #2196f3;
+$main-text-color: #333333;
+$color-white: #ffffff;
+$accent-color: #28a745;
 
 $animation-duration: 250ms;
 $animation-type: cubic-bezier(0.4, 0, 0.2, 1);
 
-$main-font-family: "Open Sans", sans-serif;
+$main-font-family: 'Open Sans', sans-serif;
+$caption-font-size: 38px;
+$text-font-size-small: 16px;
+$text-font-size-medium: 18px;
+$text-font-size-large: 20px;
 
 $width-mobile: 480px;
 $width-tablet: 768px;

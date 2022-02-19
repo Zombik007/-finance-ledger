@@ -3,133 +3,120 @@
   padding-top: 150px;
 }
 
-.about__list {
-  padding-left: 50px;
-  padding-right: 50px;
+.about {
+  &__list {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__caption,
+  &__text {
+    text-align: center;
+  }
+
+  &__caption {
+    font-size: $text-font-size-medium;
+    font-weight: 300;
+    line-height: 1.7;
+    color: $main-text-color;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: $text-font-size-small;
+    line-height: 1.63;
+    color: $main-text-color;
+    margin-bottom: 18px;
+  }
+
+  &__icon {
+    position: relative;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon-block {
+    width: 64px;
+    height: 64px;
+    background: $accent-color;
+    border-radius: 33.5px;
+    margin-bottom: 11px;
+  }
+
+  &__info-block {
+    background: $accent-color;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-caption-text {
+    font-size: $text-font-size-medium;
+    font-weight: 300;
+    line-height: 1.7;
+    color: $color-white;
+    margin-bottom: 5px;
+  }
+
+  &__info-caption {
+    font-size: $caption-font-size;
+    font-weight: 300;
+    line-height: 1.26;
+    color: $color-white;
+    margin-bottom: 25px;
+  }
+
+  &__info-text {
+    font-size: $text-font-size-small;
+    line-height: 1.63;
+    color: $color-white;
+    margin-bottom: 14px;
+  }
+
+  &__button-icon {
+    width: 9px;
+    height: 18px;
+    fill: #fff;
+    margin-right: 6px;
+  }
+
+  &__info-button {
+    width: 158px;
+    height: 47px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $color-white;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-size: $text-font-size-small;
+    line-height: 1.63;
+    color: $color-white;
+  }
+
+  &__info-button:hover,
+  &__info-button:focus {
+    background-color: $color-white;
+    color: $accent-color;
+  }
 }
 
-.about__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.about__caption,
-.about__text {
-  text-align: center;
-}
-
-.about__caption {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 30px;
-  color: #333333;
-  margin-bottom: 15px;
-}
-
-.about__text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #333333;
-  margin-bottom: 18px;
-}
-
-.about__icon {
-  position: relative;
-  font-size: 32px;
-  text-align: center;
-  color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.about__icon-block {
-  width: 64px;
-  height: 64px;
-  background: #28a745;
-  border-radius: 33.5px;
-  margin-bottom: 11px;
-}
-
-.about__info-block {
-  background: #28a745;
-  padding: 30px;
-  margin-bottom: 50px;
-}
-
-.about__info {
-  display: flex;
-  flex-direction: column;
-  // background: #28a745;
-  // padding: 30px;
-  // margin-bottom: 50px;
-}
-
-// .about__info-image-container {
-//   background-color: #28a745;
-// }
-
-.about__info-caption-text {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 30px;
-  color: #ffffff;
-  margin-bottom: 5px;
-}
-
-.about__info-caption {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 38px;
-  line-height: 48px;
-  color: #ffffff;
-  margin-bottom: 25px;
-}
-
-.about__info-text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
-.about__button-icon {
-  width: 9px;
-  height: 18px;
-  fill: #fff;
-  margin-right: 6px;
-}
-
-.about__info-button {
-  width: 158px;
-  height: 47px;
-  outline: none;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 5px;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
-  color: #ffffff;
-}
-
-.about__info-button:hover,
-.about__info-button:focus {
-  background-color: #ffffff;
-  color: #28a745;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $width-tablet) {
   #about {
     margin-top: -100px;
     padding-top: 100px;
@@ -146,13 +133,13 @@
 
     &__caption {
       min-width: 194px;
-      font-size: 20px;
-      line-height: 33px;
+      font-size: $text-font-size-large;
+      line-height: 1.65;
     }
 
     &__text {
-      font-size: 18px;
-      line-height: 28px;
+      font-size: $text-font-size-medium;
+      line-height: 1.56;
       margin-bottom: 0;
     }
 
@@ -187,33 +174,28 @@
     }
 
     &__info-block {
-      // width: 384px;
-      // height: 564px;
+      height: 564px;
       padding: 30px;
       margin-bottom: 0;
     }
 
     &__info-image {
       object-fit: cover;
-      width: 384px;
+      width: 50%;
       height: 564px;
     }
 
     &__info-caption-text {
-      font-size: 20px;
-      line-height: 33px;
+      font-size: $text-font-size-large;
+      line-height: 1.65;
     }
 
     &__info-caption {
       max-width: 204px;
-      font-size: 38px;
-      line-height: 48px;
       margin-bottom: 26px;
     }
 
     &__info-text {
-      font-size: 18px;
-      line-height: 28px;
       margin-bottom: 22px;
     }
 
@@ -221,13 +203,13 @@
       width: 167px;
       height: 50px;
 
-      font-size: 18px;
-      line-height: 28px;
+      font-size: $text-font-size-medium;
+      line-height: 1.56;
     }
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $width-desktop) {
   .about {
     display: flex;
     flex-direction: column;
@@ -254,12 +236,12 @@
 
     &__info-block {
       // width: 384px;
-      // height: 564px;
+      height: 460px;
       padding: 85px 30px 84px 30px;
     }
 
     &__info-image {
-      width: 680px;
+      width: 50%;
       height: 460px;
     }
 
@@ -268,17 +250,14 @@
     }
 
     &__info-text {
-      font-size: 18px;
-      line-height: 28px;
+      font-size: $text-font-size-medium;
+      line-height: 1.56;
       margin-bottom: 17px;
     }
 
     &__info-button {
       width: 167px;
       height: 50px;
-
-      font-size: 18px;
-      line-height: 28px;
     }
   }
 }

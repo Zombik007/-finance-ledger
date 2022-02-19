@@ -1,14 +1,4 @@
-.zaminitel {
-  display: none;
-}
-
-.zaminitel-js {
-  display: block;
-  height: 120px;
-}
-
 .header {
-  // height: 120px;
   position: relative;
   padding: 20px;
   height: 120px;
@@ -41,7 +31,7 @@
 
   &__icon {
     font-size: 35px;
-    color: #28a745;
+    color: $accent-color;
     margin-right: 6px;
     text-align: center;
   }
@@ -51,6 +41,20 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  &__logo--green {
+    font-size: 32px;
+    line-height: 42px;
+    color: $accent-color;
+  }
+
+  &__logo--white {
+    font-size: 32px;
+    line-height: 42px;
+
+    color: $color-white;
+    margin-bottom: 10px;
   }
 
   &__logo:hover,
@@ -72,24 +76,7 @@
   }
   &__logo:hover &__logo--white,
   &__logo:focus &__logo--white {
-    color: #ffffffb9;
-  }
-
-  &__logo--green {
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 42px;
-    color: #28a745;
-    margin-right: 6px;
-  }
-
-  &__logo--white {
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 42px;
-
-    color: #ffffff;
-    margin-bottom: 10px;
+    opacity: 0.8;
   }
 
   &__list-pages {
@@ -107,10 +94,10 @@
 
   &__link {
     position: relative;
-    font-weight: normal;
-    font-size: 16px;
+
+    font-size: $text-font-size-small;
     line-height: 26px;
-    color: #ffffff;
+    color: $color-white;
   }
 
   &__link:hover::after,
@@ -122,13 +109,13 @@
     display: block;
     width: 130%;
     height: 2px;
-    background-color: #28a745;
+    background-color: $accent-color;
     border-radius: 2px;
     transform: translateX(-50%);
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $width-tablet) {
   .zaminitel-js {
     height: 70px;
   }
@@ -162,26 +149,19 @@
     }
 
     &__link {
-      font-size: 18px;
+      font-size: $text-font-size-medium;
       line-height: 28px;
     }
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: $width-desktop) {
   .header {
     padding: 10px 50px;
 
-    &__logo--green {
-      font-size: 35px;
-      line-height: 42px;
-      margin-right: 9px;
-    }
+   
 
-    &__icon-logo--white {
-      font-size: 35px;
-      line-height: 42px;
-    }
+   
 
     &__item-pages {
       margin: 0;
