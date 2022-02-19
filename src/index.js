@@ -29,18 +29,18 @@ function hadlerSubmit(e) {
     setTimeout(() => {
       inputWarning.style.opacity = 0;
     }, 5000);
-    return;
+    // return;
+  } else {
+    let form = document.querySelector('.formWithValidation');
+    let formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log('Form successfully submitted'))
+      .catch(error => alert(error));
   }
-
-  let form = document.querySelector('.formWithValidation');
-  let formData = new FormData(form);
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log('Form successfully submitted'))
-    .catch(error => alert(error));
 }
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
