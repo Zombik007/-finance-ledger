@@ -15,7 +15,7 @@ function changeHeaderBackground() {
   }
 }
 
-const form = document.querySelector('.formWithValidation');
+const form = document.querySelector('.form');
 const inputFieldEmail = document.querySelector('.js-contact__input-field');
 const inputWarning = document.querySelector('.contact__input-warning');
 
@@ -36,8 +36,7 @@ function hadlerSubmit(e) {
 }
 
 function sendForm() {
-  const formSend = document.querySelector('form');
-  let formData = new FormData(formSend);
+  let formData = new FormData(form);
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
