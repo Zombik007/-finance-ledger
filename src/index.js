@@ -42,12 +42,12 @@ function hadlerSubmit(e) {
   })
     .then(() => console.log('Form successfully submitted'))
     .catch(error => alert(error));
-  // removeListener();
+  removeListener();
 }
 
-// function removeListener() {
-//   form.removeEventListener('submit', hadlerSubmit);
-// }
+function removeListener() {
+  form.removeEventListener('submit', hadlerSubmit);
+}
 
 // const hundlerSubmit = e => {
 //   e.preventDefault();
