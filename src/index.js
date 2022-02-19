@@ -15,7 +15,7 @@ function changeHeaderBackground() {
   }
 }
 
-const form = document.querySelector('form');
+const form = document.querySelector('.formWithValidation');
 const inputFieldEmail = document.querySelector('.js-contact__input-field');
 const inputWarning = document.querySelector('.contact__input-warning');
 
@@ -34,7 +34,7 @@ function hadlerSubmit(e) {
   // }
   if (inputFieldEmail.value.length === 0) {
     validate();
-    return;
+    // return;
   }
   sendForm();
 }
@@ -52,7 +52,8 @@ function validate() {
 }
 
 function sendForm() {
-  let formData = new FormData(form);
+  let formSend = document.querySelector('form');
+  let formData = new FormData(formSend);
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -60,6 +61,7 @@ function sendForm() {
   })
     .then(() => console.log('Form successfully submitted'))
     .catch(error => alert(error));
+
   console.log(formData);
 }
 
