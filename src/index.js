@@ -4,7 +4,7 @@ window.onscroll = function () {
   changeHeaderBackground();
 };
 
-let header = document.querySelector('.header');
+const header = document.querySelector('.header');
 let headerHeight = header.offsetHeight;
 
 function changeHeaderBackground() {
@@ -15,9 +15,9 @@ function changeHeaderBackground() {
   }
 }
 
-let form = document.querySelector('.formWithValidation');
-let inputFieldEmail = document.querySelector('.js-contact__input-field');
-let inputWarning = document.querySelector('.contact__input-warning');
+const form = document.querySelector('.formWithValidation');
+const inputFieldEmail = document.querySelector('.js-contact__input-field');
+const inputWarning = document.querySelector('.contact__input-warning');
 
 form.addEventListener('submit', hadlerSubmit);
 
