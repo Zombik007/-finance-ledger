@@ -60,6 +60,7 @@ function sendForm() {
   })
     .then(() => console.log('Form successfully submitted'))
     .catch(error => alert(error));
+  console.log(formData);
 }
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
