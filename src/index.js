@@ -36,7 +36,8 @@ function hadlerSubmit(e) {
 }
 
 function sendForm() {
-  let formData = new FormData(form);
+  const formSend = document.querySelector('form');
+  let formData = new FormData(formSend);
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
