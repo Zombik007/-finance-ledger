@@ -174,6 +174,7 @@
     }
 
     &__info-block {
+      max-width: 50%;
       height: 564px;
       padding: 30px;
       margin-bottom: 0;
@@ -181,7 +182,6 @@
 
     &__info-image {
       object-fit: cover;
-      width: 50%;
       height: 564px;
     }
 
@@ -235,13 +235,11 @@
     }
 
     &__info-block {
-      // width: 384px;
       height: 460px;
       padding: 85px 30px 84px 30px;
     }
 
     &__info-image {
-      width: 50%;
       height: 460px;
     }
 

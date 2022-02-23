@@ -74,6 +74,7 @@
 
     &__box {
       background: #0284d0;
+      max-width: 50%;
       padding: 29px 30px 30px 30px;
     }
 
@@ -101,8 +102,7 @@
 
     &__image {
       object-fit: cover;
-      max-width: 50%;
-      max-height: 468px;
+      height: 468px;
     }
   }
 }
@@ -134,8 +134,7 @@
     }
 
     &__image {
-      max-width: 50%;
-      max-height: 517px;
+      height: 517px;
     }
   }
 }

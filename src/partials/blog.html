@@ -9,5 +9,16 @@
     </p>
     <button class="blog__button"><i class="blog__icon fas fa-angle-right"></i>Read Our Blog</button>
   </div>
-  <img class="blog__image" src="./images/home/blog.jpg" alt="" />
+  <picture>
+      <source
+        srcset="./images/home/blog.webp 1x, ./images/home/blog@2x.webp 2x"
+        type="image/webp"
+      />
+      <img
+        class="blog__image"
+        srcset="./images/home/blog.jpg 1x, ./images/home/blog@2x.jpg 2x"
+        src="./images/home/blog.jpg"
+        alt="People team"
+      />
+    </picture>
 </section>

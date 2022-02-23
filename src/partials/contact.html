@@ -1,7 +1,18 @@
 <section class="contact" id="contact">
   <div class="contact__box">
     <h2 class="visually-hidden">Contact</h2>
-    <img src="./images/home/contact.jpg" alt=" " class="contact__image" />
+    <picture>
+      <source
+        srcset="./images/home/contact.webp 1x, ./images/home/contact@2x.webp 2x"
+        type="image/webp"
+      />
+      <img
+        class="contact__image"
+        srcset="./images/home/contact.jpg 1x, ./images/home/contact@2x.jpg 2x"
+        src="./images/home/contact.jpg"
+        alt="Men work at computer"
+      />
+    </picture>
     <div class="contact__form">
       <form
         autocomplete="off"
