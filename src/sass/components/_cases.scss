@@ -1,12 +1,6 @@
-#cases {
-  margin-top: -170px;
-  padding-top: 170px;
-}
-
 .bussines-cases {
   margin: 0;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding: 50px 28px 46px 28px;
 }
 
 .bussines-cases__image-link {
@@ -15,10 +9,6 @@
 
 .bussines-cases__image-link:not(:last-child) {
   margin-bottom: 7px;
-}
-
-.bussines-cases__image-box {
-  margin-bottom: 46px;
 }
 
 .bussines-cases__image {
@@ -52,21 +42,14 @@
   font-size: $text-font-size-small;
   line-height: 26px;
   text-align: center;
-
   color: $main-text-color;
   margin-bottom: 37px;
 }
 
 @media screen and (min-width: $width-tablet) {
-  #cases {
-    margin-top: -118px;
-    padding-top: 118px;
-  }
-
   .bussines-cases {
-    padding: 0 28px;
+    padding: 48px 28px;
     margin: 0;
-    margin-bottom: 48px;
 
     &__text-caption {
       font-size: $text-font-size-large;

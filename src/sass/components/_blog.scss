@@ -1,8 +1,3 @@
-#blog {
-  margin-top: -120px;
-  padding-top: 120px;
-}
-
 .blog {
   display: flex;
   flex-direction: column-reverse;
@@ -43,8 +38,6 @@
 }
 
 .blog__button {
-  width: 184px;
-  height: 47px;
   outline: none;
   border: 1px solid $color-white;
   border-radius: 5px;
@@ -62,19 +55,13 @@
 }
 
 @media screen and (min-width: $width-tablet) {
-  #blog {
-    margin-top: -70px;
-    padding-top: 70px;
-  }
-
   .blog {
     display: flex;
     flex-direction: row;
-    margin-bottom: 48px;
 
     &__box {
       background: #0284d0;
-      max-width: 50%;
+      width: 50vw;
       padding: 29px 30px 30px 30px;
     }
 
@@ -93,15 +80,13 @@
     }
 
     &__button {
-      width: 196px;
-      height: 50px;
-
       font-size: $text-font-size-medium;
       line-height: 28px;
     }
 
     &__image {
       object-fit: cover;
+      width: 50vw;
       height: 468px;
     }
   }
@@ -126,11 +111,6 @@
       font-size: $text-font-size-medium;
       line-height: 28px;
       margin-bottom: 17px;
-    }
-
-    &__button {
-      width: 196px;
-      height: 50px;
     }
 
     &__image {

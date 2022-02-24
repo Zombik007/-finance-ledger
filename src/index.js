@@ -56,15 +56,20 @@ links.forEach(link => {
     e.preventDefault();
     let header = document.querySelector('.header');
     let headerHeight = header.offsetHeight;
-
+    let windowInnerWidth = document.documentElement.clientWidth;
     let href = this.getAttribute('href').substring(1);
 
     const scrollTarget = document.getElementById(href);
     let topOffset = header.offsetHeight;
 
     if (window.pageYOffset >= headerHeight) {
-      topOffset = 0;
+      if (windowInnerWidth <= 767) {
+        topOffset = 120;
+      } else {
+        topOffset = 70;
+      }
     }
+
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
 
